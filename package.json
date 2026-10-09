@@ -1,0 +1,17 @@
+{
+  "name": "shell-token-splitter",
+  "version": "0.1.0",
+  "description": "Splits a shell command string into argument tokens following POSIX quoting and escape rules.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
