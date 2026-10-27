@@ -29,3 +29,10 @@ is **preserved as a literal backslash** (POSIX). So `"a\\nb"` becomes `a\\nb`,
 not `anb`. Many splitters get this wrong by stripping the backslash. If you
 need C-style `\\n` translation, do it after tokenizing — that is not the shell's
 job.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
